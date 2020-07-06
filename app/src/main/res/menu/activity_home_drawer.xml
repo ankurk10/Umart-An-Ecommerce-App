@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_umall"
+            android:id="@+id/nav_umart"
             android:icon="@drawable/ic_store_mall_directory_24px"
-            android:title="UMall" />
+            android:title="UMart" />
         <item
             android:id="@+id/nav_my_orders"
             android:icon="@drawable/my_orders"
             android:title="My Orders" />
-        <item
-            android:id="@+id/nav_my_rewards"
-            android:icon="@drawable/my_rewards"
-            android:title="My Rewards" />
         <item
             android:id="@+id/nav_my_cart"
             android:icon="@drawable/cart_black"
@@ -32,6 +26,36 @@
             android:icon="@drawable/my_account"
             android:title="My Account" />
     </group>
+
+
+
+
+    <item
+        android:title="Communicate">
+
+        <menu>
+            <group  android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_email"
+                android:title="Email"/>
+
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share"/>
+
+            <item
+                android:id="@+id/nav_info"
+                android:title="App Info"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+        
+
 
     <item
         android:id="@+id/nav_sign_out"

@@ -2,6 +2,8 @@
     <string name="app_name">UMart</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
+    <string name="open_navigation_drawer">Open navigation drawer</string>
+    <string name="close_navigation_drawer">Close navigation drawer</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>

@@ -38,7 +38,7 @@
         android:id="@+id/main_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email Address"
+        android:text="youremail@gmail.com"
         android:textColor="#80ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

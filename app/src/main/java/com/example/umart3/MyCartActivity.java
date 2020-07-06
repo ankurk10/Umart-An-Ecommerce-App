@@ -1,39 +1,34 @@
 package com.example.umart3;
 
-import android.os.Bundle;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.umart3.CartItemModel.CART_ITEM_LAYOUT;
-import static com.example.umart3.CartItemModel.TOTAL_AMOUNT_LAYOUT;
-
-public class MyCartFragment extends Fragment {
-
-    public MyCartFragment()
-    {
-
-    }
+public class MyCartActivity extends AppCompatActivity {
 
     private RecyclerView cartItemsRecyclerView;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my_cart, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_cart);
 
-        cartItemsRecyclerView = view.findViewById(R.id.cart_items_recyclerview);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setTitle("My Cart");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        cartItemsRecyclerView = findViewById(R.id.cart_items_recyclerview);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         cartItemsRecyclerView.setLayoutManager(layoutManager);
 
@@ -46,6 +41,7 @@ public class MyCartFragment extends Fragment {
         CartItemAdapter cartItemAdapter = new CartItemAdapter(cartItemModelList);
         cartItemsRecyclerView.setAdapter(cartItemAdapter);
         cartItemAdapter.notifyDataSetChanged();
-        return view;
+
+
     }
 }
