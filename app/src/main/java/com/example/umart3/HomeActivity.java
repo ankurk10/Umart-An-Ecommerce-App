@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private static final int HOME_FRAGMENT = 0;
     private static final int CART_FRAGMENT = 1;
     private static int currentFragment = -1;
+    private static final int WISHLIST_FRAGMENT = 3;
      DrawerLayout drawer;
     Toolbar toolbar;
 
@@ -86,7 +87,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         else
         {
-            super.onBackPressed();
+            if(currentFragment == HOME_FRAGMENT) {
+                super.onBackPressed();
+            }
+
+            else
+            {
+                actionBarLogo.setVisibility(View.VISIBLE);
+                invalidateOptionsMenu();
+                setFragment(new MainHomeFragment(), HOME_FRAGMENT);
+                navigationView.getMenu().getItem(0).setChecked(true);
+            }
         }
     }
 
@@ -149,7 +160,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_umart :
                 actionBarLogo.setVisibility(View.VISIBLE);
                 invalidateOptionsMenu();
-                setFragment(new HomeFragment(), HOME_FRAGMENT);
+                setFragment(new MainHomeFragment(), HOME_FRAGMENT);
                 break;
 
 
@@ -164,9 +175,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_my_wishlist:
+               Intent myWishlistIntent = new Intent(HomeActivity.this, MyWishListActivity.class);
+               startActivity(myWishlistIntent);
                 break;
 
             case R.id.nav_my_account:
+                Intent myAccountIntent = new Intent(HomeActivity.this, MyAccountActivity.class );
+                startActivity(myAccountIntent);
                 break;
 
             case R.id.nav_email:

@@ -37,14 +37,17 @@
             <group  android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_email"
+                android:icon="@drawable/baseline_email_black_24"
                 android:title="Email"/>
 
             <item
                 android:id="@+id/nav_share"
+                android:icon="@drawable/baseline_share_black_24"
                 android:title="Share"/>
 
             <item
                 android:id="@+id/nav_info"
+                android:icon="@drawable/baseline_info_black_24"
                 android:title="App Info"/>
 
             </group>

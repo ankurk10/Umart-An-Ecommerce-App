@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MyCartActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
         android:layout_width="match_parent"
